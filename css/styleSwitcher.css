@@ -70,13 +70,11 @@ body.dark .section{
 }
 body.dark .aside,
 body.dark .contact .contact-form .form-item .form-control,
-body.dark .blog .blog-item-inner .blog-info,
 body.dark .service .service-item .service-item-inner,
 body.dark .about .about-content .timeline{
     background-color: #222222;
 }
 body.dark .aside .nav li a,
-body.dark .blog .blog-item-inner .blog-info .blog-title,
 body.dark .contact .contact-info-item h4,
 body.dark .portfolio .portfolio-filter button,
 body.dark .service .service-item .service-item-inner h4,
@@ -92,9 +90,7 @@ body.dark .aside .logo a{
 }
 body.dark .home .intro span,
 body.dark .contact .contact-form .form-item .form-control,
-body.dark .blog .blog-item-inner .blog-info .blog-description,
 body.dark .contact .contact-info-item p,
-body.dark .blog .blog-item-inner .blog-info .blog-tags,
 body.dark .service .service-item .service-item-inner p,
 body.dark .about .about-content .timeline .timeline-text,
 body.dark .about .about-content .timeline .timeline-date,
@@ -106,7 +102,6 @@ body.dark .about .about-content .about-text p{
 body.dark .about .about-content .personal-info .info-item p,
 body.dark .aside,
 body.dark .contact .contact-form .form-item .form-control,
-body.dark .blog .blog-item-inner,
 body.dark .portfolio .portfolio-item-innner,
 body.dark .service .service-item .service-item-inner,
 body.dark .about .about-content .timeline,
