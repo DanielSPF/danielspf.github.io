@@ -2,7 +2,7 @@
 
 ## Tarefas
 - Conteúdo
-  - [ ] Página inicial
+  - [x] Página inicial
   - [ ] Página sobre
   - [ ] Página portfolio
   - [ ] Página contato
