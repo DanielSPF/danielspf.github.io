@@ -15,6 +15,18 @@ window.ityped.init(document.querySelector('.iTyped'), {
     loop: true
 });
 
+// Date and Age
+
+const currentDate = new Date(),
+    birthday = new Date('1998-01-09'),
+    diff = Math.abs(currentDate.getTime() - birthday.getTime()),
+    age = Math.round(diff / (1000 * 60 * 60 * 24 * 365));
+    spanAge = document.getElementById('age'),
+    spanCopy = document.getElementById('copyYear');
+
+    spanAge.innerText = age;
+    spanCopy.innerText = currentDate.getFullYear();
+
 // Portfolio Item Filter
 
 const filterContainer = document.querySelector('.portfolio-filter'),
