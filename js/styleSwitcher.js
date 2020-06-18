@@ -15,18 +15,12 @@ function setActiveStyle(color)
 
 // body skin
 
-const bodySkin = document.querySelectorAll('.body-skin'),
-    totalBodySkin = bodySkin.length;
+const bodySkin = document.getElementById('body-skin');
 
-for (let i = 0; i < totalBodySkin; i++) {
-    bodySkin[i].addEventListener('change', function(){
-        if(this.value === 'dark'){
-            document.body.className = 'dark';
-        } else {
-            document.body.className = '';
-        }
-    });
-}
+bodySkin.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+});
+
 
 document.querySelector('.toggle-style-switcher').addEventListener('click', () => {
     document.querySelector('.style-switcher').classList.toggle('open');
