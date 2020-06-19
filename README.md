@@ -1,9 +1,11 @@
 # Meu Website
 
 ## Tarefas
+
 - Conteúdo
   - [x] Página inicial
-  - [ ] Página sobre
+  - [x] Página sobre
+  - [ ] Página serviços
   - [ ] Página portfolio
   - [ ] Página contato
   - [x] Live demo
