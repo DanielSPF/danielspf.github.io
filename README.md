@@ -4,8 +4,11 @@
 
 - Conteúdo
   - [x] Página inicial
-  - [x] Página sobre
-  - [ ] Página serviços
+  - [/] Página sobre
+    - [ ] Elaboração do currículo
+    - [ ] Preenchemento de Cursos na Educação
+    - [ ] Seção certificados
+  - [x] Página serviços
   - [ ] Página portfolio
   - [ ] Página contato
   - [x] Live demo
