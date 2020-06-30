@@ -80,8 +80,8 @@ function toggleLightbox() {
 }
 
 function changeItem() {
-    let imgSrc = portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src');
-    lightboxImg.src = imgSrc;
+    let imgSrc = portfolioItems[itemIndex].querySelector('.portfolio-img img').getAttribute('src').split('/');
+    lightboxImg.src = imgSrc[0]+"/"+imgSrc[1]+"/"+imgSrc[3];
     lightboxText.innerHTML = portfolioItems[itemIndex].querySelector('h4').innerHTML;
     lightboxCounter.innerHTML = (itemIndex + 1) + " of " + totalPortfolioItem;
 }
