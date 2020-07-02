@@ -493,7 +493,7 @@ input, textarea, select{
 .about .about-content .personal-info .info-item p{
     font-weight: 600;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     color: #302e4d;
     border-bottom: 1px solid #e8dfec;
@@ -631,7 +631,6 @@ input, textarea, select{
     font-size: 16px;
     line-height: 25px;
     color: #504e70;
-    text-align: justify;
     margin: 0;
 }
 
@@ -1121,7 +1120,7 @@ input, textarea, select{
         transform: translateX(0%);
     }
     100%{
-        transform: translateX(-10px);
+        transform: translateX(-15px);
     }
 }
 @-webkit-keyframes showAlert{
@@ -1135,7 +1134,7 @@ input, textarea, select{
         transform: translateX(0%);
     }
     100%{
-        transform: translateX(-10px);
+        transform: translateX(-15px);
     }
 }
 
@@ -1146,7 +1145,7 @@ input, textarea, select{
 
 @keyframes hideAlert{
     0%{
-        transform: translateX(-10px);
+        transform: translateX(-15px);
     }
     40%{
         transform: translateX(0%);
@@ -1160,7 +1159,7 @@ input, textarea, select{
 }
 @-webkit-keyframes hideAlert{
     0%{
-        transform: translateX(-10px);
+        transform: translateX(-15px);
     }
     40%{
         transform: translateX(0%);
@@ -1234,6 +1233,13 @@ input, textarea, select{
     .contact .contact-info-item{
         flex: 0 0 100%;
         -ms-flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media(max-width: 458px){
+    .about .about-content .personal-info .info-item{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
         max-width: 100%;
     }
 }

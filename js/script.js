@@ -203,16 +203,20 @@ function asideSectionTogglerBtn()
 
 // Contact Form
 
-const contactForm = document.getElementById('contact-form');
+const contactForm = document.getElementById('contact-form'),
+    btnSubmit = document.querySelector('.btn_loading');
 var yourName, email, subject, message;
 contactForm.addEventListener('submit', function(e){
     e.preventDefault();
+
+    btnSubmit.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Loading...';
 
     yourName = document.getElementsByName('name')[0].value;
     email = document.getElementsByName('email')[0].value;
     subject = document.getElementsByName('subject')[0].value;
     message = document.getElementsByName('message')[0].value;
     if (yourName === '' || email === '' || subject === '' || message === '') {
+        btnSubmit.innerHTML = 'Enviar mensagem';
         return showAlertBox('É necessário preencher todos os campos do formulário.', 'danger');
     }
 
@@ -229,9 +233,12 @@ contactForm.addEventListener('submit', function(e){
         function(){
             showAlertBox('Sua mensagem foi enviada com sucesso, entrarei em contato em breve!', 'success');
             cleanContactForm();
+            btnSubmit.innerHTML = 'Enviar mensagem';
+            
         },
         function(){
             showAlertBox('Houve um erro ao enviar o e-mail, por favor tente novamente!', 'danger');
+            btnSubmit.innerHTML = 'Enviar mensagem';
         }
     );
 });
