@@ -200,3 +200,81 @@ function asideSectionTogglerBtn()
         allSection[i].classList.toggle('open');
     }
 }
+
+// Contact Form
+
+const contactForm = document.getElementById('contact-form');
+var yourName, email, subject, message;
+contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    yourName = document.getElementsByName('name')[0].value;
+    email = document.getElementsByName('email')[0].value;
+    subject = document.getElementsByName('subject')[0].value;
+    message = document.getElementsByName('message')[0].value;
+    if (yourName === '' || email === '' || subject === '' || message === '') {
+        return showAlertBox('É necessário preencher todos os campos do formulário.', 'danger');
+    }
+
+    Email.send({
+        // SecureToken : "6f468dd9-8048-407d-8d79-4cd07c9d9362",
+        Host : "smtp.gmail.com",
+        Username : "contato.danielwebsite@gmail.com",
+        Password : "SuiD^8737RY8BFrhh*ArJecyoF8qakOr",
+        To : 'danielfilho.web@gmail.com',
+        From : email,
+        Subject : subject,
+        Body : "<p><strong>Nome: </strong>"+yourName+"</p>"+"<strong>Mensagem: </strong> <p>"+message+"</p>"
+    }).then(
+        function(){
+            showAlertBox('Sua mensagem foi enviada com sucesso, entrarei em contato em breve!', 'success');
+            cleanContactForm();
+        },
+        function(){
+            showAlertBox('Houve um erro ao enviar o e-mail, por favor tente novamente!', 'danger');
+        }
+    );
+});
+
+function cleanContactForm(){
+    yourName = document.getElementsByName('name')[0].value = "";
+    email = document.getElementsByName('email')[0].value = "";
+    subject = document.getElementsByName('subject')[0].value = "";
+    message = document.getElementsByName('message')[0].value = "";
+}
+
+// AlertBox
+
+const alertBox = document.querySelector('.alert-box'),
+        closeBtn = document.querySelector('.close-alert');
+let timer;
+
+closeBtn.addEventListener('click', function(){
+    hideAlertBox();
+});
+
+function showAlertBox(message, type)
+{
+    if (alertBox.classList.contains('hidden')) {
+        alertBox.classList.remove('hidden');
+    }
+    alertBox.querySelector('p').innerText = message;
+    alertBox.classList.add('alert-'+type);
+    alertBox.classList.remove('hide');
+    alertBox.classList.add('show');
+    timer = setTimeout(function(){
+        hideAlertBox(type);
+    }, 6000);
+}
+
+function hideAlertBox(type = false) 
+{
+    alertBox.classList.add('hide');
+    alertBox.classList.remove('show');
+    if (type != false) {
+        timer = setTimeout(function(){
+            alertBox.classList.remove('alert-'+type);
+        }, 2000);
+    }
+}
+

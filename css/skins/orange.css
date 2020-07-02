@@ -37,6 +37,8 @@ body.dark .aside .nav li a.active,
     background-color: #fa5b0f;
 }
 
-.portfolio .portfolio-filter button.active{
+.portfolio .portfolio-filter button.active,
+.service .service-item:hover .service-item-inner::before, 
+.service .service-item:hover .service-item-inner::after{
     border-color: #fa5b0f;
 }
