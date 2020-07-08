@@ -15,16 +15,10 @@ window.ityped.init(document.querySelector('.iTyped'), {
     loop: true
 });
 
-// Date and Age
+// Date 
 
 const currentDate = new Date(),
-    birthday = new Date('1998-01-09'),
-    diff = Math.abs(currentDate.getTime() - birthday.getTime()),
-    age = Math.round(diff / (1000 * 60 * 60 * 24 * 365));
-    spanAge = document.getElementById('age'),
     spanCopy = document.getElementById('copyYear');
-
-    spanAge.innerText = age;
     spanCopy.innerText = currentDate.getFullYear();
 
 // Portfolio Item Filter
@@ -221,10 +215,8 @@ contactForm.addEventListener('submit', function(e){
     }
 
     Email.send({
-        // SecureToken : "6f468dd9-8048-407d-8d79-4cd07c9d9362",
+        SecureToken : "6f468dd9-8048-407d-8d79-4cd07c9d9362",
         Host : "smtp.gmail.com",
-        Username : "contato.danielwebsite@gmail.com",
-        Password : "SuiD^8737RY8BFrhh*ArJecyoF8qakOr",
         To : 'danielfilho.web@gmail.com',
         From : email,
         Subject : subject,
