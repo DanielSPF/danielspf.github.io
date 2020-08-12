@@ -215,8 +215,10 @@ contactForm.addEventListener('submit', function(e){
     }
 
     Email.send({
-        SecureToken : "7adf8e94-2600-4e0f-8916-f0a46fdc1cea",
+        // SecureToken : "7adf8e94-2600-4e0f-8916-f0a46fdc1cea",
         Host : "smtp.gmail.com",
+        Username : "contato.danielwebsite@gmail.com",
+        Password : "SuiD^8737RY8BFrhh*ArJecyoF8qakOr",
         To : 'danielfilho.web@gmail.com',
         From : email,
         Subject : subject,
