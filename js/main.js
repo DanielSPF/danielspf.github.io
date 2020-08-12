@@ -170,14 +170,6 @@ function updateNav(element) {
   }
 }
 
-document.querySelector('.hire-me').addEventListener('click', function () {
-  const sectionIndex = this.getAttribute('data-section-index');
-  addBackSectionClass(sectionIndex);
-  showSection(this);
-  updateNav(this);
-  removeBackSectionClass();
-});
-
 function showSection(element) {
   for (let i = 0; i < totalSection; i++) {
     allSection[i].classList.remove('active');
