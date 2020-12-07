@@ -550,6 +550,7 @@ select {
     line-height: 25px;
     color: #020203;
     margin: 0;
+    text-align: justify;
 }
 
 .about .about-content .personal-info {
